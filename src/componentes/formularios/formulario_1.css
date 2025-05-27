@@ -1,0 +1,541 @@
+.perfil-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family:'Times New Roman', Geneva, Verdana, sans-serif;
+}
+
+.foto-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.foto-perfil {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 7px solid #000000;
+}
+
+.nombre {
+  color: #000000;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.campo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #ddd; 
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.icono {
+  margin-right: 15px;
+  color: #333333;
+  font-size: 20px;
+}
+
+.dato-contenedor {
+  display: flex;
+  flex-grow: 1;
+}
+
+.etiqueta {
+  font-weight: 600;
+  color: #000000;
+  margin-right: 10px;
+  width: 80px;
+}
+
+.valor {
+  color: #555;
+}
+
+.estudios-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.titulo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.titulo-mostrado {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.titulo-container .etiqueta {
+  width: auto;
+  min-width: 50px;
+}
+
+.opciones-busqueda{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.opcion-label{
+  
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.95rem;
+  
+}
+
+.opcion-radio{
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.opcion-radio:checkend{
+  border-color:#000000
+  
+}
+
+.opcion-radio:checked::after{
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: #420202;
+  border-radius: 50%;
+}
+
+.opcion-texto{
+  color: #555555;
+}
+
+
+
+/* barra de menu */
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.tags-superiores {
+  display: flex;
+  justify-content: space-around;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tag {
+  font-weight: bold;
+  color: #ff6b6b;
+  padding: 0.5rem;
+}
+
+
+/* Animación para los tags */
+.tag {
+  font-weight: bold;
+  color: #ff6b6b;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  background: transparent;
+}
+
+.tag:hover {
+  background-color: #ff6b6b;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 107, 107, 0.2);
+}
+
+.tag:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(255, 107, 107, 0.2);
+}
+
+/* Asegurar que el menú no afecte el layout */
+.menu-perfil {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.tags-superiores {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* Multimedia*/
+
+.seccion-multimedia {
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.contenedor-multimedia {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.item-multimedia {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.item-multimedia img, 
+.item-multimedia video {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+  
+}
+
+.boton-agregar-multimedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.boton-agregar-multimedia:hover {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.eliminar-multimedia {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Estilos para el zoom */
+.modal-zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  cursor: zoom-out;
+}
+
+.contenedor-zoom {
+  max-width: 90vw;
+  max-height: 90vh;
+  position: relative;
+}
+
+.media-zoom {
+  max-height: 90vh;
+  max-width: 90vw;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cerrar-zoom {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Estilos para los items */
+.contenedor-media {
+  cursor: zoom-in;
+  width: 100%;
+  height: 170px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contenedor-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icono-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para el contenedor de la foto de perfil */
+.contenedor-foto-perfil {
+  cursor: zoom-in;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.foto-perfil {
+  transition: transform 0.3s;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.05);
+}
+
+/* Ajustes para el botón de editar en foto de perfil */
+.foto-container .editar-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.cambiar-foto {
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  text-align: center;
+}
+
+.foto-label {
+  background: #ff6b6b;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+/* campo descripcion */
+
+/* Contenedor principal */
+/* Contenedor principal */
+.campo-descripcion {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+}
+
+/* Encabezado */
+.descripcion-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icono-descripcion {
+  margin-right: 10px;
+  color: #000000;
+  font-size: 18px;
+}
+
+.etiqueta-descripcion {
+  font-weight: 600;
+  color: #333;
+  flex-grow: 1;
+}
+
+/* Área de texto editable */
+.input-descripcion {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+/* Texto mostrado */
+.texto-descripcion {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+  padding: 10px;
+}
+
+/* Contador de caracteres */
+.contador-caracteres {
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}
+
+/* Botón de edición */
+.editar-btn-descripcion {
+  background: none;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Estilos del modal (agregar al final del archivo) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-edicion {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal-edicion h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.modal-edicion p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-confirmar {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-confirmar:hover {
+  background-color: #c0392b;
+}
+
+.btn-cancelar {
+  background-color: #ecf0f1;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-cancelar:hover {
+  background-color: #d0d0d0;
+}
+
+
+/* Estilo para el label de búsqueda */
+.label-busqueda {
+  margin: -10px 0 15px 0;
+  padding: 5px 0;
+}
+
+.texto-busqueda {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  color: #555;
+  display: inline-block;
+}
+
+/* Contenedor para centrar */
+.contenedor-busqueda-centrado {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: -10px 0 15px 0;
+}
+
+/* Estilo del label centrado */
+.label-busqueda-centrado {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}

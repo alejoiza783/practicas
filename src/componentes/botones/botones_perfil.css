@@ -1,0 +1,39 @@
+.editar-btn {
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+    padding: 5px;
+  }
+  
+  .editar-btn:hover {
+    color: #555;
+  }
+  
+  /* Estilos para el botón Al ataque */
+.ataque-btn-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .ataque-btn {
+    background-color: #545050;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(180, 177, 177, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .ataque-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  

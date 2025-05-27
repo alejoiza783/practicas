@@ -1,0 +1,37 @@
+/* 1. Contenedor principal del formulario */
+.form-container {
+  background: #FFFFFF !important;
+  /* Mantén el resto de tus estilos originales */
+  border: 1px solid var(--light-gray);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 2. Campos de entrada */
+.form-group input:not([type="file"]),
+.form-group select,
+.form-group textarea {
+  background: #FFFFFF !important;
+  border: 2px solid var(--light-gray) !important;
+}
+
+/* 3. Área de subida de archivos */
+.file-upload-container {
+  background: #FFFFFF !important;
+  border: 2px dashed var(--light-gray) !important;
+}
+
+/* 4. Sección de previsualización */
+.foto-preview {
+  background: #FFFFFF !important;
+}
+
+/* 5. Contenedor de perfil */
+.perfil-container {
+  background: #FFFFFF !important;
+}
+
+/* 6. Placeholder de foto */
+.foto-placeholder {
+  background: #FFFFFF !important;
+  border: 2px dashed var(--light-gray) !important;
+}
